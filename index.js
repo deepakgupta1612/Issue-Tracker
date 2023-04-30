@@ -1,5 +1,6 @@
-const PORT = 5000;
 const express = require('express');
+require('dotenv').config();
+const port = process.env.PORT||8000 ;
 const app = express();
 const router = require('./route')
 const expressLayouts = require('express-ejs-layouts');
@@ -20,4 +21,4 @@ app.use('/', router)
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.listen(PORT, ()=>{console.log("connected to server : "+ PORT) })
+app.listen(port, ()=>{console.log("connected to server : "+ port) })
