@@ -58,7 +58,7 @@ module.exports.issueTrackerPage = async (req, res) => {
 }
 
 module.exports.createproject = (req, res) => {
-    return res.render('createProject', {
+    return res.render('createproject', {
         title: "Create Project"
     })
 }
